@@ -1,5 +1,10 @@
 "use strict";
 
+const AxiosMockAdapter = require(
+  "axios-mock-adapter");
+const axios = require("axios");
+const axiosMock = new AxiosMockAdapter(axios);
+
 const request = require("supertest");
 const app = require("../app");
 
