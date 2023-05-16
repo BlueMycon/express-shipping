@@ -21,9 +21,7 @@ describe("POST /", function () {
       .post("/shipments")
       .send({});
     expect(resp.statusCode).toEqual(400);
-    console.log('resp \n', resp, '\n');
-    console.log('\n resp error =>', resp.error, "\n");
-    expect(resp.text).toEqual({
+    expect(resp.body.error).toEqual({
         "message": [
           "instance requires property \"productId\"",
           "instance requires property \"name\"",
