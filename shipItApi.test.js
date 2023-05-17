@@ -12,7 +12,7 @@ afterAll(function () {
 });
 
 test("shipProduct", async function () {
-  axiosMock.onPost(`${SHIPIT_SHIP_URL}`).reply(200, {
+  axiosMock.onPost(SHIPIT_SHIP_URL).reply(200, {
     receipt: {
       itemId: 1000,
       name: "Test Tester",
